@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAGASEEN | Shop</title>
+
+  <link rel="stylesheet" href="shop.css">
+</head>
+
+<body>
+
+<div id="smooth-wrapper">
+<div id="smooth-content">
+
+  <!-- ================= HEADER ================= -->
+  <header class="shop-header">
+    <h1 class="title-left">MAGA</h1>
+    <div class="title-center">[ tienda ]</div>
+    <h1 class="title-right">SEEN</h1>
+
+    
+  </header>
+
+  <!-- ================= CATEGORÍAS ================= -->
+  <nav class="categorias">
+    <span class="cat-title">TIENDA</span>
+    <a href="#" target="_blank">/playera oversize</a>
+    <button id="btnCarrito" class="carrito-btn">🛒 Carrito (<span id="contador">0</span>)</button>
+  </nav>
+
+  <!-- ================= PLAYERAS ================= -->
+<section class="galeria">
+
+  <div class="producto">
+    <a href="producto-negra.html">
+      <img src="../SHOP/NEGRA.png" class="producto-img">
+    </a>
+    <h3>Playera tipo Boxy</h3>
+    <p class="color">Negro</p>
+    <p class="precio">$350.00</p>
+    <button class="btn-add" onclick="agregarCarrito('negra', 'Playera Boxy - Negro', 350)">Agregar al carrito</button>
+
+  </div>
+
+  <div class="producto">
+    <a href="producto-hueso.html">
+      <img src="../SHOP/HUESO.png" class="producto-img">
+    </a>
+    <h3>Playera tipo Boxy</h3>
+    <p class="color">Hueso</p>
+    <p class="precio">$350.00</p>
+    <button class="btn-add" onclick="agregarCarrito('Hueso', 'Playera Boxy - Hueso', 350)">Agregar al carrito</button>
+
+  </div>
+
+  <div class="producto">
+    <a href="producto-gris.html">
+      <img src="../SHOP/GRIS.png" class="producto-img">
+    </a>
+    <h3>Playera tipo Boxy</h3>
+    <p class="color">Gris</p>
+    <p class="precio">$350.00</p>
+    <button class="btn-add" onclick="agregarCarrito('Gris', 'Playera Boxy - Gris', 350)">Agregar al carrito</button>
+
+  </div>
+
+  <div class="producto">
+    <a href="producto-blanca.html">
+      <img src="../SHOP/BLANCA.png" class="producto-img">
+    </a>
+    <h3>Playera tipo Boxy</h3>
+    <p class="color">Blanca</p>
+    <p class="precio">$350.00</p>
+    <button class="btn-add" onclick="agregarCarrito('Blanca', 'Playera Boxy - Blanca', 350)">Agregar al carrito</button>
+
+  </div>
+
+  <div id="carrito" class="carrito">
+    <button id="cerrarCarrito" class="cerrar">✖</button>
+
+
+  <h2>Tu Carrito</h2>
+  <ul id="listaCarrito"></ul>
+  <h3>Total: $<span id="total">0</span></h3>
+  <button class="btn-comprar">Finalizar Compra</button>
+</div>
+
+
+</section>
+
+
+
+  <!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+  <div class="footer-contenedor">
+
+    <!-- Redes sociales -->
+    <div class="footer-col">
+      <h3>Síguenos</h3>
+      <div class="redes">
+        <a href="https://www.instagram.com/magaseen.mx/" target="_blank">Instagram</a>
+
+      </div>
+    </div>
+
+    <!-- Créditos -->
+    <div class="footer-col">
+      <h3>Créditos</h3>
+      <p>Desarrollado por:</p>
+      <p><strong>Omar Montes</strong></p>
+      <p><strong>Yassel Soriano</strong></p>
+    </div>
+
+  </div>
+
+  <p class="footer-copy">© 2025 MAGASEEN — Todos los derechos reservados.</p>
+
+</footer>
+
+
+</div> <!-- smooth-content -->
+</div> <!-- smooth-wrapper -->
+
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
+<script src="animaciones-header.js"></script>
+<script src="carrito.js"></script>
+</body>
+</html>

@@ -1,0 +1,418 @@
+/* =================== RESET Y BASE =================== */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f2f2;
+  color: #000;
+}
+
+/* =================== HEADER =================== */
+.shop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  text-align: center;
+}
+
+.title-left, .title-right {
+  font-size: 48px; /* Antes 70px */
+  font-weight: 900;
+  margin: 0;
+}
+
+.title-center {
+  font-size: 18px; /* Antes 20px */
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+
+/* =================== CATEGORÍAS =================== */
+.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 40px;
+  font-size: 16px; /* Antes 18px */
+  text-transform: uppercase;
+}
+
+.categorias .cat-title {
+  font-weight: bold;
+}
+
+.categorias a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.categorias a:hover {
+  text-decoration: underline;
+}
+
+/* =================== GALERÍA =================== */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Ajustado */
+  gap: 30px;
+  padding: 40px;
+  justify-items: center;
+}
+
+/* ========== TARJETA DE PRODUCTO (NUEVO HOVER UNIFICADO) ========== */
+.producto {
+  width: 100%;
+  max-width: 240px;
+  text-align: left;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 14px;
+  background: #fff;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+/* Imagen */
+.producto-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+  background: #ccc;
+}
+
+/* Hover unificado */
+.producto:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0px 12px 35px rgba(0,0,0,0.12);
+  background: #fafafa;
+}
+
+.producto:hover .producto-img {
+  transform: scale(1.07);
+}
+
+/* Textos de producto */
+.producto h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+.color {
+  margin: 0;
+  font-size: 13px;
+  color: #444;
+}
+
+.precio {
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* =================== FOOTER NUEVO =================== */
+.footer {
+  background: #e3e3e3;
+  padding: 50px 40px;
+  margin-top: 40px;
+  color: #333;
+  text-align: center;
+}
+
+.footer-contenedor {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.footer-col {
+  max-width: 200px;
+}
+
+.footer-col h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.footer-col a {
+  display: block;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-top: 20px;
+}
+
+/* Responsive footer */
+@media (max-width: 600px) {
+  .footer-contenedor {
+    gap: 30px;
+  }
+}
+
+
+/* ===== TÍTULOS SECCIÓN ===== */
+.seccion-titulo {
+  width: 100%;
+  padding: 60px 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.titulo-scroll {
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 3px;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* =================== RESPONSIVE =================== */
+@media (max-width: 900px) {
+  .title-left, .title-right {
+    font-size: 38px;
+  }
+  .shop-header {
+    padding: 25px 30px;
+  }
+  .categorias {
+    font-size: 14px;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .shop-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .title-left, .title-right {
+    font-size: 34px;
+  }
+  .title-center {
+    font-size: 14px;
+  }
+  .categorias {
+    padding: 10px 20px;
+    gap: 10px;
+    font-size: 13px;
+  }
+  .galeria {
+    padding: 20px;
+    gap: 20px;
+  }
+  .producto {
+    max-width: 200px;
+  }
+  .producto-img {
+    height: 200px;
+  }
+  .producto h3 {
+    font-size: 15px;
+  }
+}
+
+/* =================== PÁGINA DE PRODUCTO =================== */
+
+.producto-detalle {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.detalle-img img {
+  width: 350px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.1);
+}
+
+.detalle-info {
+  max-width: 400px;
+}
+
+.detalle-info h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.detalle-info .color {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.detalle-info .precio {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.descripcion {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.btn-volver {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-volver:hover {
+  opacity: 0.8;
+}
+
+/* =================== BOTÓN CARRITO =================== */
+.carrito-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  z-index: 9999;
+}
+
+.carrito-btn:hover {
+  opacity: 0.8;
+}
+
+
+/* =================== CARRITO =================== */
+.carrito {
+  position: fixed;
+  top: 0;
+  right: -360px;
+  width: 320px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -6px 0 25px rgba(0,0,0,0.15);
+  padding: 25px;
+  transition: 0.4s ease;
+  z-index: 9999;
+  overflow-y: auto;
+}
+
+.carrito.abierto {
+  right: 0;
+}
+
+.carrito h2 {
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.carrito ul {
+  list-style: none;
+  padding: 0;
+}
+
+.carrito ul li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  font-size: 14px;
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 8px;
+}
+
+.carrito ul li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-comprar {
+  width: 100%;
+  padding: 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.btn-comprar:hover {
+  opacity: 0.8;
+}
+
+/* =================== BOTÓN AGREGAR =================== */
+.btn-add {
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn-add:hover {
+  background: #000;
+  color: #fff;
+}
+
+
+@media (max-width: 600px) {
+  .carrito {
+    width: 100%;
+  }
+  .carrito-btn {
+    right: 20px;
+  }
+}
+
+.cerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #000;
+    transition: 0.3s;
+}
+
+.carrito-cerrar:hover {
+    color: #ff4d4d;
+}
