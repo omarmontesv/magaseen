@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playera Negra | MAGASEEN</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="shop.css">
+  <link rel="stylesheet" href="producto-hueso.css">
+</head>
+
+<body>
+
+<!-- ===========================
+     BOTÓN DEL CARRITO (FLOTANTE)
+=========================== -->
+<button id="btnCarrito">🛒 Carrito (<span id="contador">0</span>)</button>
+
+<!-- ===========================
+     PANEL DEL CARRITO LATERAL
+=========================== -->
+<div id="carrito" class="carrito">
+  <h2>Carrito</h2>
+
+  <ul id="listaCarrito"></ul>
+
+  <p><strong>Total:</strong> $<span id="total">0</span></p>
+
+  <button class="btn-pago">Proceder al pago</button>
+
+
+</div>
+
+
+
+<div id="smooth-wrapper">
+<div id="smooth-content">
+
+  <!-- HEADER -->
+  <header class="shop-header">
+    <h1 class="title-left">MAGA</h1>
+    <div class="title-center">[ producto ]</div>
+    <h1 class="title-right">SEEN</h1>
+  </header>
+
+  <!-- CONTENIDO CENTRADO -->
+  <div class="producto-container">
+
+    <!-- DETALLE DEL PRODUCTO -->
+    <section class="producto-detalle">
+
+      <div class="detalle-img">
+        <img src="../SHOP/HUESO.png" alt="Playera Negra">
+      </div>
+
+      <div class="detalle-info">
+        <h2>Playera tipo Boxy</h2>
+        <p class="color">Negro</p>
+        <p class="precio">$350.00</p>
+
+       <button class="btn-add" onclick="agregarCarrito('boxy1','Playera tipo Boxy Hueso',350)">
+  Agregar al carrito
+</button>
+
+
+        <p class="descripcion">
+          Playera estilo boxy premium, algodón pesado, corte oversize.
+        </p>
+
+        <a href="shop.html" class="btn-volver">← Volver a la tienda</a>
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- GALERÍA -->
+  <section class="galeria-container">
+
+    <h3 class="subtitulo-galeria">Galería del producto</h3>
+
+    <div class="galeria-grid">
+
+      <div class="galeria-item">
+        <img src="../SHOP/modelo-hueso1.jpg" alt="Modelo frontal">
+      </div>
+
+      <div class="galeria-item">
+        <img src="../SHOP/modelo-hueso2.jpg" alt="Modelo posterior">
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <div class="footer-section">
+        <h4>Síguenos</h4>
+        <a href="https://www.instagram.com/magaseen.mx/" target="_blank">Instagram</a>
+      </div>
+
+      <div class="footer-section">
+        <h4>Créditos</h4>
+        <p>Omar Montes</p>
+        <p>Yassel Soriano</p>
+      </div>
+
+    </div>
+
+    <p class="footer-copy">© 2025 MAGASEEN — Todos los derechos reservados.</p>
+  </footer>
+
+</div>
+</div>
+<script src="carrito.js"></script>
+</body>
+</html>
